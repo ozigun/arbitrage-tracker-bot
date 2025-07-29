@@ -35,14 +35,14 @@ export default function Coin({ symbol, price, prevPrice }) {
 
   return (
     <div
-      className={`${bgColor} relative rounded-md w-48 h-36 p-4 flex flex-col justify-between items-center text-white shadow-md transition-colors duration-300`}>
+      className={`${bgColor} relative rounded-md w-48 h-32 p-4 flex flex-col justify-between items-center text-white shadow-md transition-colors duration-300`}>
       <h3 className="text-lg font-semibold">{symbol}</h3>
-      <p className="font-mono text-2xl">{parseFloat(price).toFixed(6)}</p>
+      <p className="font-mono text-xl">{parseFloat(price).toFixed(6)}</p>
 
-      {/* Kalp ikonu sağ alt köşede */}
+      {/* Küçük kalp ikonu sağ alt köşede */}
       <button
         onClick={toggleFav}
-        className="absolute bottom-2 right-2 text-white hover:text-red-500 transition-colors"
+        className="absolute bottom-1.5 right-1.5 text-white hover:text-red-500 transition-colors"
         aria-label={fav ? "Remove from favorites" : "Add to favorites"}>
         {fav ? (
           <svg
@@ -50,7 +50,7 @@ export default function Coin({ symbol, price, prevPrice }) {
             fill="red"
             viewBox="0 0 24 24"
             stroke="red"
-            className="w-6 h-6">
+            className="w-5 h-5">
             <path
               d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
              4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 
@@ -65,7 +65,7 @@ export default function Coin({ symbol, price, prevPrice }) {
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={2}
-            className="w-6 h-6">
+            className="w-5 h-5">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
